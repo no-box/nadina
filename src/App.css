@@ -1,0 +1,114 @@
+/* App-specific styles */
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(30, 90, 107, 0.2);
+  color: #1E5A6B;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid #1E5A6B;
+  outline-offset: 2px;
+}
+
+/* Button and link transitions */
+button,
+a {
+  transition: all 0.3s ease;
+}
+
+/* Image loading placeholder */
+img {
+  background-color: #F5F7F8;
+}
+
+/* Form input focus */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #1E5A6B;
+  box-shadow: 0 0 0 3px rgba(30, 90, 107, 0.1);
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #1E5A6B 0%, #2A7A8C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Section divider */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #E2E8F0, transparent);
+}
+
+/* Mobile menu animation */
+.mobile-menu-enter {
+  transform: translateX(100%);
+}
+
+.mobile-menu-enter-active {
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
+}
+
+.mobile-menu-exit {
+  transform: translateX(0);
+}
+
+.mobile-menu-exit-active {
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in;
+}
+
+/* Loading skeleton */
+@keyframes skeleton {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #F5F7F8 25%, #E2E8F0 50%, #F5F7F8 75%);
+  background-size: 200% 100%;
+  animation: skeleton 1.5s infinite;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+  }
+}
